@@ -12,11 +12,10 @@ npm install
 
 ## Настройка
 
-1. Создайте файл `.env` в корневой директории проекта(по примеру .env.example)
+1. Создайте файл `.env` в корневой директории проекта(по примеру `.env.example`)
 2. Добавьте следующие переменные окружения:
    ```
    WB_FINANCES_OAUTH_TOKEN=your_oauth_token_here
-   NODE_ENV=development
    ```
 
 ## Запуск
@@ -43,6 +42,39 @@ npm start
 - `downloadDocument` - Загрузка одного документа
 - `downloadDocumentsAll` - Загрузка нескольких документов
 - `generateWeeklyReport` - Генерация еженедельного отчёта
+
+#### Конфиг для Goose
+
+Добавьте в конфиг Гуся(`~/.config/goose/config.yaml`):
+```yaml
+  wildberries-finances-mcp:
+    args:
+    - /path/to/wildberries-finances-mcp-server/build/index.js
+    bundled: null
+    cmd: node
+    description: null
+    enabled: true
+    env_keys: []
+    envs: {}
+    name: wildberries-finances-mcp
+    timeout: 300
+    type: stdio
+```
+
+#### Конфиг для Cline:
+
+```
+    "wildberries-finances-mcp": {
+      "autoApprove": [],
+      "disabled": false,
+      "timeout": 300,
+      "command": "node",
+      "args": [
+        "/path/to/wildberries-finances-mcp-server/build/index.js"
+      ],
+      "type": "stdio"
+    }
+```
 
 ## Безопасность
 
