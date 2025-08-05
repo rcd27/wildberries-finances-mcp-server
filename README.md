@@ -1,3 +1,5 @@
+<img src="https://badge.mcpx.dev?type=server" title="MCP Server"/>
+
 # WB Finances MCP Server
 
 MCP сервер для работы с API Wildberries Finances.
