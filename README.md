@@ -31,6 +31,11 @@ npm run build
 npm start
 ```
 
+### Дебаг
+```bash
+npx @modelcontextprotocol/inspector node ./build/index.js
+```
+
 ## Использование
 
 Сервер предоставляет следующие инструменты:
